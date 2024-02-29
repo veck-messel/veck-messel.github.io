@@ -8,6 +8,6 @@ vm.localhost {
 
 :80 {
 	encode zstd gzip
-	root * /srv/site
+	root * /srv
 	file_server
 }
