@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  caddy:
+    container_name: caddy-web
+    image: caddy:latest
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "2525:2525"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./site:/srv/site
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

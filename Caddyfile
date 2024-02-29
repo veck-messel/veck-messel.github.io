@@ -1,0 +1,13 @@
+{
+	auto_https off
+}
+
+vm.localhost {
+	reverse_proxy http://localhost:80
+}
+
+:80 {
+	encode zstd gzip
+	root * /srv/site
+	file_server
+}
