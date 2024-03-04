@@ -2,6 +2,12 @@
 @import url("about.css");
 @import url("principle.css");
 
+@font-face{
+    font-family: 'GreatVictorian';
+    src: url(/src/css/fonts/ofont.ru_Cygre.ttf)
+}
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -19,7 +25,7 @@ html{
     font-size: 24px;
     line-height: 35px;
     color: var(--dark-theme-text-color);
-
+    /* font-family: 'GreatVictorian'; */
 }
 
 h1{

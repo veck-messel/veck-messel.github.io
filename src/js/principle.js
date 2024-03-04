@@ -122,13 +122,13 @@ function change_block(current_id, prev_id=''){
     change_text_content(global_current_id);
     try{
         delete_canv(prev_id);
-        //document.getElementById(block_name.get(prev_id)).className = "prev_col";
-        document.getElementById(block_name.get(prev_id)).classList.add("prev_col");
+        document.getElementById(block_name.get(prev_id)).className = "prev_col";
+        // document.getElementById(block_name.get(prev_id)).classList.add("prev_col");
     }
     catch (err)
     {}
-    // document.getElementById(block_name.get(current_id)).className = "current_col";
-    document.getElementById(block_name.get(current_id)).classList.add("current_col");
+    document.getElementById(block_name.get(current_id)).className = "current_col";
+    // document.getElementById(block_name.get(current_id)).classList.add("current_col");
     create_canv(current_id);
 }
 
