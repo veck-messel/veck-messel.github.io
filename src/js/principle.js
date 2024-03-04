@@ -41,7 +41,7 @@ function create_context(canvas_obj){
 function set_canvas_dimension(canvas_obj){
     let div_root1 = document.getElementById("root");
     let div_root_width1 = div_root1.clientWidth;
-    if (div_root_width1 > 400){
+    if (div_root_width1 > 500){
         canvas_obj.width = 20;
         canvas_obj.height = 20;
     }
@@ -122,11 +122,13 @@ function change_block(current_id, prev_id=''){
     change_text_content(global_current_id);
     try{
         delete_canv(prev_id);
-        document.getElementById(block_name.get(prev_id)).className = "prev_col";
+        //document.getElementById(block_name.get(prev_id)).className = "prev_col";
+        document.getElementById(block_name.get(prev_id)).classList.add("prev_col");
     }
     catch (err)
     {}
-    document.getElementById(block_name.get(current_id)).className = "current_col";
+    // document.getElementById(block_name.get(current_id)).className = "current_col";
+    document.getElementById(block_name.get(current_id)).classList.add("current_col");
     create_canv(current_id);
 }
 
