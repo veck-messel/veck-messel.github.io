@@ -1,7 +1,6 @@
 .content2{  
     display: grid; grid-template-columns: 2fr 1fr; 
     grid-gap: 10vw;
-    opacity: .9;
 }
 
 @media (max-width: 800px){

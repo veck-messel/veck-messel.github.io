@@ -68,14 +68,12 @@
     display: inline-block; 
     margin: 0vh 0.5vw 0vh 0.5vw; 
     vertical-align: middle;
-    opacity: .5; 
 }
 
 #header_second_link{
     display: inline-block; 
     margin: 0vh 0.5vw 0vh 0.5vw; 
     vertical-align: middle;
-    opacity: .5;
 }
 
 #header_third_link{
