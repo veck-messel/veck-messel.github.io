@@ -46,7 +46,7 @@ $(document).ready(function() {
         carousel_shifts_percent.set(block_name, 0);
         initial_carousel_shifts_percent.set(block_name, 0);
         auto_scroll_enables.set(block_name, false)
-        auto_scroll_deltas.set(block_name, 1)
+        auto_scroll_deltas.set(block_name, 0.5)
     }
 
 // block_name - имя flex-контейнера
@@ -86,34 +86,37 @@ function move(e, block_name){
 }
 
 async function auto_scroll(block_name){
-    let carousel_block_width = $(block_name).prop('scrollWidth');
-    // Ширина видимой прокручиваемой части
-    let visible_piece_width = $(block_name).width();
-    // Максимальный сдвиг
-    let max_shift = carousel_block_width - visible_piece_width;
+    console.log($(window).width())
+    if ($(window).width() > 1000){
+        let carousel_block_width = $(block_name).prop('scrollWidth');
+        // Ширина видимой прокручиваемой части
+        let visible_piece_width = $(block_name).width();
+        // Максимальный сдвиг
+        let max_shift = carousel_block_width - visible_piece_width;
 
-    let carousel_shift_px = carousel_shifts_percent.get(block_name) * carousel_block_width;
+        let carousel_shift_px = carousel_shifts_percent.get(block_name) * carousel_block_width;
 
-    // Считаем новый
-    carousel_shift_px = carousel_shift_px - auto_scroll_deltas.get(block_name);
-    // Если сдвиг больше максимального, то мы его не увеличиваем, а отсавляем начальным 
-    if (carousel_shift_px <= -max_shift -50 || carousel_shift_px > 50){
-        auto_scroll_deltas.set(block_name, -auto_scroll_deltas.get(block_name))
-    }
-    $(block_name).scrollLeft(-carousel_shift_px);
-    carousel_shifts_percent.set(block_name, carousel_shift_px/carousel_block_width);
-    if (auto_scroll_enables.get(block_name)){
-        return new Promise(resolve => {
-            requestAnimationFrame(resolve);
-        }).then(() => {auto_scroll(block_name)})
-    }
-    else{
-        return Promise.resolve()
+        // Считаем новый
+        carousel_shift_px = carousel_shift_px - auto_scroll_deltas.get(block_name);
+        // Если сдвиг больше максимального, то мы его не увеличиваем, а отсавляем начальным 
+        if (carousel_shift_px <= -max_shift -50 || carousel_shift_px > 50){
+            auto_scroll_deltas.set(block_name, -auto_scroll_deltas.get(block_name))
+        }
+        $(block_name).scrollLeft(-carousel_shift_px);
+        carousel_shifts_percent.set(block_name, carousel_shift_px/carousel_block_width);
+        if (auto_scroll_enables.get(block_name)){
+            return new Promise(resolve => {
+                //setTimeout(() => {resolve()}, 100)
+                requestAnimationFrame(resolve);
+            }).then(() => {auto_scroll(block_name)})
+        }
+        else{
+            return Promise.resolve()
+        }
     }
 }
 
 async function events_for_carousel(block_name, onMouseMove_func=()=>{}, onClick_func=() => {}, offClick_func=() => {}, resize_func=() => {}, load_func=()=>{}, auto_scroll_enable=false){
-    console.log('saopdija')
     create_initial_data(block_name);
     let carousel_block_width = $(block_name).prop('scrollWidth');
     let carousel_shift_percent = carousel_shifts_percent.get(block_name);
@@ -139,20 +142,17 @@ async function events_for_carousel(block_name, onMouseMove_func=()=>{}, onClick_
         })
 
         $(document).on('mouseup', ()=>{
-            console.log('aspodkpok')
             $(document).off('mousedown'); 
             $(document).off('mousemove');
             $(block_name).off('mousemove');
 
             prev_coordsX_px.set(block_name, 0);
             if (initial_carousel_shifts_percent.get(block_name) != carousel_shifts_percent.get(block_name)){
-                console.log('pasodkpaoskoapsdk')
                 $(block_name).off('click');
                 offClick_func()
                 initial_carousel_shifts_percent.set(block_name, carousel_shifts_percent.get(block_name));
             }
             else {
-                console.log('else')
                 onClick_func()
             }
 
@@ -165,6 +165,7 @@ async function events_for_carousel(block_name, onMouseMove_func=()=>{}, onClick_
     if (auto_scroll_enable && $(window).width() >= 768){
         auto_scroll_enables.set(block_name, auto_scroll_enable)
         await auto_scroll(block_name);
+        // auto_scroll(block_name);
     }
 
 }
@@ -180,7 +181,7 @@ async function events_for_carousel(block_name, onMouseMove_func=()=>{}, onClick_
     // events_for_carousel('.university-gallerey-mobile-slider');
     // events_for_carousel('.videos-carousel-slider', () => {onMouseMove_for_imgs(region)});
 
-    events_for_carousel('.temp', () => {}, () => {}, () => {}, () => {}, () => {}, auto_scroll_enable = true);
+    events_for_carousel('.content4_bottom_carousel');//, () => {}, () => {}, () => {}, () => {}, () => {}, auto_scroll_enable = true);
     $(window).on('resize', () => {
         resize_functions.forEach((func) => {
             func()

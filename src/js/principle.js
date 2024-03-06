@@ -17,7 +17,8 @@ ids.set("next_id", "second");
 
 let switch_tog = false;
 let start_angle = -Math.PI/2;
-let delta = Math.PI/350;
+// let delta = Math.PI/350;
+let delta = Math.PI/300;
 let end_angle = start_angle;
 
 
@@ -143,6 +144,7 @@ async function draw_arc(){
     context.strokeStyle='white';
     return new Promise(resolve => {
         requestAnimationFrame(resolve);
+        // setTimeout(() => {resolve()}, 100)
     }).then(draw_arc);
     }
     else {

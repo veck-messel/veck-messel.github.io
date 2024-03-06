@@ -135,4 +135,8 @@
     .content3_right_principle_center_header{
         width: auto;
     }
+
+    .content3_right_wrap{
+        border-radius: 30px;
+    }
 }
