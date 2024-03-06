@@ -86,7 +86,6 @@ function move(e, block_name){
 }
 
 async function auto_scroll(block_name){
-    console.log($(window).width())
     if ($(window).width() > 1000){
         let carousel_block_width = $(block_name).prop('scrollWidth');
         // Ширина видимой прокручиваемой части
@@ -181,7 +180,7 @@ async function events_for_carousel(block_name, onMouseMove_func=()=>{}, onClick_
     // events_for_carousel('.university-gallerey-mobile-slider');
     // events_for_carousel('.videos-carousel-slider', () => {onMouseMove_for_imgs(region)});
 
-    events_for_carousel('.content4_bottom_carousel');//, () => {}, () => {}, () => {}, () => {}, () => {}, auto_scroll_enable = true);
+    events_for_carousel('.content4_bottom_carousel', () => {}, () => {}, () => {}, () => {}, () => {}, auto_scroll_enable = true);
     $(window).on('resize', () => {
         resize_functions.forEach((func) => {
             func()
