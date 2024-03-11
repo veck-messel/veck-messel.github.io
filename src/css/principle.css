@@ -9,7 +9,7 @@
     box-sizing: border-box;
     padding: 60px 60px 30px 60px;    
     background: var(--dark-theme-principle-form-background-color);  
-    border-radius: 2vw;
+    border-radius: 40px;
     height: max-content;
 }
 

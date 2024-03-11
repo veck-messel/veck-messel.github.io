@@ -22,7 +22,8 @@ h1, h2, h3, h4, h5, h6, span, p, a, label, input, textarea, button{
 }
 
 html{
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
+    background-color: var(--dark-theme-section-background-color)
 }
 
 :root{
@@ -41,6 +42,12 @@ html{
     /* font-family: 'GreatVictorian'; */
 }
 
+#root{
+    max-width: 1920px;
+    width: 100%;
+    margin: auto;
+}
+
 h1{
     margin-top: 0;
     line-height: 40px;
@@ -56,11 +63,12 @@ h1{
 .section1{
     min-height: 650px;
     max-height: 1080px;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 80px);
 }
 
 .section-wrap{
-    padding: 40px 10vw 40px 10vw;
+    /* padding: 40px 10vw 40px 10vw; */
+    padding: 40px 160px 40px 170px;
 }
 
 .section-wrap::after{
@@ -84,6 +92,7 @@ h1{
 .content{
     padding-bottom: 70px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .content1{
@@ -103,6 +112,14 @@ h1{
     :root{
         font-size: 24px;
     }
+
+    .section-wrap{
+        padding: 20px 160px 20px 170px;
+    }
+
+    .content{
+        padding-bottom: 50px;
+    }
 }
 
 
@@ -110,6 +127,10 @@ h1{
     :root{
         font-size: 19px;
         line-height: 30px;
+    }
+
+    .section-wrap{
+        padding: 20px 130px 20px 140px;
     }
 }
  

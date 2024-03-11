@@ -1,6 +1,16 @@
 .content2{  
-    display: grid; grid-template-columns: 2fr 1fr; 
-    grid-gap: 10vw;
+    /* display: grid; grid-template-columns: 2fr 1fr; 
+    grid-gap: 10vw; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.content2_left{
+    flex: 0 0 50%
+}
+
+.content2_right{
+    flex: 0 0 20%;
 }
 
 @media (max-width: 800px){
