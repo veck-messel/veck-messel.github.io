@@ -85,6 +85,8 @@ function move(e, block_name){
 
 }
 
+// ids = new Array()
+
 async function auto_scroll(block_name){
     if ($(window).width() > 1000){
         let carousel_block_width = $(block_name).prop('scrollWidth');
@@ -106,7 +108,7 @@ async function auto_scroll(block_name){
         if (auto_scroll_enables.get(block_name)){
             return new Promise(resolve => {
                 //setTimeout(() => {resolve()}, 100)
-                requestAnimationFrame(resolve);
+                equestAnimationFrame(resolve);
             }).then(() => {auto_scroll(block_name)})
         }
         else{

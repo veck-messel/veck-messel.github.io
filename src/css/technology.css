@@ -50,9 +50,9 @@
 
 
 .content4{
-    display: grid; 
-    grid-template-rows: max-content max-content;
-    grid-gap: 3vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .content4_bottom_carousel{
@@ -93,6 +93,12 @@
         scroll-snap-stop: always;
     }
     
+}
+
+@media (max-width: 600px){
+    .content4{
+        gap: 30px;
+    }
 }
 
 @media (max-width: 600px){

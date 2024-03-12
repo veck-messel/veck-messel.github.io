@@ -42,7 +42,7 @@ function create_context(canvas_obj){
 function set_canvas_dimension(canvas_obj){
     let div_root1 = document.getElementById("root");
     let div_root_width1 = div_root1.clientWidth;
-    if (div_root_width1 > 500){
+    if (div_root_width1 > 600){
         canvas_obj.width = 20;
         canvas_obj.height = 20;
     }
