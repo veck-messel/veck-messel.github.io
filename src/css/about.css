@@ -15,8 +15,19 @@
 
 @media (max-width: 800px){
      .content2{
-        display: grid;
+        /* display: grid;
         grid-template: none;
-        grid-template-rows: max-content max-content;
+        grid-template-rows: max-content max-content; */
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
      }
+}
+
+@media (max-width: 800px){
+    .content2{
+       display: grid;
+       grid-template: none;
+       grid-template-rows: max-content max-content;
+    }
 }

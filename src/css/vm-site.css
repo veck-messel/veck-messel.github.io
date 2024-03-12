@@ -61,7 +61,7 @@ h1{
 }
 
 .section1{
-    min-height: 650px;
+    /* min-height: 650px; */
     max-height: 1080px;
     height: calc(100vh - 80px);
 }
@@ -130,13 +130,17 @@ h1{
     }
 
     .section-wrap{
-        padding: 20px 130px 20px 140px;
+        padding: 20px 110px 20px 120px;
     }
 }
  
 @media (max-width: 800px){
     :root{
         font-size: 20px;
+    }
+
+    .section-wrap{
+        padding: 20px 60px 20px 70px;
     }
 }
 
@@ -149,13 +153,34 @@ h1{
     .content1{
         align-items: center;
         text-align: center;
+        padding-top: 70px;
     }
+
+    /* .section-wrap{
+        padding: 20px 60px 20px 70px;
+    } */
 }
 
 
-@media (max-width: 400px){
+@media (max-width: 500px){
     :root{
         font-size: 15px;
         line-height: 20px;
+    }
+
+    .section-wrap{
+        padding: 10px 30px;
+    }
+
+    .left_header_content{
+        display: none;
+    }
+
+    .content{
+        padding-bottom: 30px;
+    }
+
+    .content1{
+        padding-top: 30px;
     }
 }
