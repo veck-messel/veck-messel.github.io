@@ -62,6 +62,10 @@
     gap: 30px;
 }
 
+.content4_bottom_carousel::-webkit-scrollbar{
+    display: none;
+}
+
 .content4_bottom_carousel_item{
     display: flex; 
     flex-direction: column; 
