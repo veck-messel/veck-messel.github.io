@@ -1,3 +1,4 @@
+@import url("hidden_menu.css");
 @import url("header.css");
 @import url("about.css");
 @import url("principle.css");
@@ -19,6 +20,11 @@
 
 h1, h2, h3, h4, h5, h6, span, p, a, label, input, textarea, button{
     opacity: .9;
+}
+
+a{
+    color: unset;
+    text-decoration: unset;
 }
 
 html{

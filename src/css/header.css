@@ -106,8 +106,10 @@
 }
 
 #header_third_link:hover {
-    background-color: rgb(34, 34, 249);
+    /* color: rebeccapurple; */
+    background-color: rebeccapurple;
     transition: 0.3s;
+    opacity: 1;
 }
 
 #header_third_link:hover > div > a{
@@ -118,6 +120,7 @@
 #header_button{
     display: none; 
     vertical-align: middle;
+    cursor: pointer;
 }
 
 

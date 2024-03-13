@@ -87,12 +87,20 @@
 .content6-second-block-item-figure{
     width: 60px; height: 60px; 
     border-radius: 50%; 
-    background: var(--dark-theme-principle-form-background-color); 
+    /* background: var(--dark-theme-principle-form-background-color);  */
+    background-color: #00ffff7a;
     margin: 0 auto; 
     margin-bottom: 20px; 
     display: flex; 
     justify-content: center; 
     align-items: center;
+    transition: .3s;
+}
+
+.content6-second-block-item a:hover .content6-second-block-item-figure{
+    /* color: rebeccapurple; */
+    background-color: rgb(51, 53, 153);
+    transition: .3s;
 }
 
 .form_input{
@@ -162,7 +170,6 @@ form {
     .content6-second-block-item-figure{
         width: 60px; height: 60px; 
         border-radius: 50%; 
-        background: var(--dark-theme-principle-form-background-color); 
         margin: 0 auto; 
         margin-bottom: 20px; 
         display: flex; 

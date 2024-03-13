@@ -1,4 +1,5 @@
 const indexSections = new Map([
+    ['.hidden_menu', 'hidden_menu.html'],
     ['.header', 'header.html'],
     ['.section2', 'about.html'],
     ['.section3', 'principles.html'],
