@@ -5,6 +5,7 @@
     background: var(--dark-theme-principle-form-background-color); 
     flex-wrap: wrap; 
     margin-bottom: 48px;
+    border-radius: 30px;
 }
 
 .content7-first-block-left-side{
@@ -94,13 +95,13 @@
     display: flex; 
     justify-content: center; 
     align-items: center;
-    transition: .3s;
+    transition: .2s;
 }
 
 .content7-second-block-item a:hover .content7-second-block-item-figure{
     /* color: rebeccapurple; */
     background-color: rgb(51, 53, 153);
-    transition: .3s;
+    transition: .2s;
 }
 
 .form_input{

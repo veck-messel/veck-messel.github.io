@@ -1,15 +1,22 @@
 @import url("hidden_menu.css");
 @import url("header.css");
+@import url("preview.css");
 @import url("about.css");
 @import url("principle.css");
 @import url("technology.css");
 @import url("cases.css");
 @import url("partners.css");
 @import url("conversation_form.css");
+@import url("footer.css");
 
 @font-face{
-    font-family: 'GreatVictorian';
-    src: url(/src/css/fonts/ofont.ru_Cygre.ttf)
+    font-family: 'Source Serif 4 Regular';
+    src: url(/src/css/fonts/Source_Serif4/static/SourceSerif4_18pt-Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Source Serif 4 SemiBold';
+    src: url(/src/css/fonts/Source_Serif4/static/SourceSerif4-SemiBold.ttf);
 }
 
 * {
@@ -47,7 +54,11 @@ html{
     font-size: 24px;
     line-height: 35px;
     color: var(--dark-theme-text-color);
-    /* font-family: 'GreatVictorian'; */
+    font-family: 'Source Serif 4 Regular';
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Source Serif 4 SemiBold';
 }
 
 #root{
@@ -68,12 +79,6 @@ h1{
     background-color: var(--dark-theme-section-background-color);
 }
 
-.section1{
-    /* min-height: 650px; */
-    max-height: 1080px;
-    height: calc(100vh - 80px);
-}
-
 .section-wrap{
     /* padding: 40px 10vw 40px 10vw; */
     padding: 40px 160px 40px 170px;
@@ -90,30 +95,10 @@ h1{
 
 }
 
-.section-wrap1{
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-}
-
-
 .content{
     padding-bottom: 70px;
     width: 100%;
     box-sizing: border-box;
-}
-
-.content1{
-    display: grid; 
-    grid-template-rows: 1fr 0.75fr 0.75fr; 
-    justify-items: center;  
-    align-items: center;
-    padding-bottom: 0px;
-    height: 100%;
-}
-
-.content5{
-    
 }
 
 @media (max-width: 1200px){
@@ -157,16 +142,6 @@ h1{
         font-size: 15px;
         line-height: 20px;
     }
-
-    .content1{
-        align-items: center;
-        text-align: center;
-        padding-top: 70px;
-    }
-
-    /* .section-wrap{
-        padding: 20px 60px 20px 70px;
-    } */
 }
 
 
@@ -186,9 +161,5 @@ h1{
 
     .content{
         padding-bottom: 30px;
-    }
-
-    .content1{
-        padding-top: 30px;
     }
 }

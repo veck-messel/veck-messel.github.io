@@ -1,0 +1,36 @@
+.section1{
+    /* min-height: 650px; */
+    max-height: 1080px;
+    height: calc(100vh - 80px);
+}
+
+.section-wrap1{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.content1{
+    display: grid; 
+    grid-template-rows: 1fr 0.75fr 0.75fr; 
+    justify-items: center;  
+    align-items: center;
+    padding-bottom: 0px;
+    height: 100%;
+}
+
+
+@media (max-width: 600px){
+    .content1{
+        align-items: center;
+        text-align: center;
+        padding-top: 70px;
+    }
+}
+
+
+@media (max-width: 500px){
+    .content1{
+        padding-top: 30px;
+    }
+}

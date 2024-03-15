@@ -101,20 +101,21 @@
     border-radius: 30px; 
     padding: 4px 30px;
     vertical-align: middle;
-    transition: 0.3s;
+    transition: 0.2s;
     cursor: pointer;
 }
 
 #header_third_link:hover {
     /* color: rebeccapurple; */
-    background-color: rebeccapurple;
-    transition: 0.3s;
+    /* background-color: rebeccapurple; */
+    background-color: rgb(51, 53, 153);
+    transition: 0.2s;
     opacity: 1;
 }
 
 #header_third_link:hover > div > a{
     color: white;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 #header_button{

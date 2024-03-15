@@ -16,6 +16,12 @@
     height: auto;
 }
 
-.content6-partner-block > img{
+.content6-partner-block img{
     flex: 0 0 auto;
+    transition: .2s;
+}
+
+.content6-partner-block img:hover{
+    transform: scale(1.3);
+    transition: .2s;
 }
