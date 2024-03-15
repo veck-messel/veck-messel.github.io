@@ -5,7 +5,8 @@ const indexSections = new Map([
     ['.section3', 'principles.html'],
     ['.section4', 'technology.html'],
     ['.section5', 'cases.html'],
-    ['.section6', 'conversation_form.html'],
+    ['.section6', 'partners.html'],
+    ['.section7', 'conversation_form.html'],
 ]);
 
 $(document).ready(() => {
