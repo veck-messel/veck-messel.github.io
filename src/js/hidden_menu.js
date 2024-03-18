@@ -12,7 +12,7 @@ function hidden_menu_disable(){
 
 $(document).ready(
     () => {
-        $('#header_button').on('click', hidden_menu_enable);
-        $('#hidden_menu_header_button, .hidden_menu_links h2').on('click', hidden_menu_disable);        
+        $('#header_button_light, #header_button_dark').on('click', hidden_menu_enable);
+        $('#hidden_menu_header_button_dark, #hidden_menu_header_button_light,  .hidden_menu_links h2').on('click', hidden_menu_disable);        
     }
 )

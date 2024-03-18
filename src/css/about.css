@@ -1,6 +1,4 @@
 .content2{  
-    /* display: grid; grid-template-columns: 2fr 1fr; 
-    grid-gap: 10vw; */
     display: flex;
     justify-content: space-between;
 }
@@ -24,7 +22,6 @@
     width: 70px; 
     height: 70px; 
     border-radius: 50%; 
-    background-color: #00ffff7a; 
     display: flex; 
     justify-content: center; 
     align-items: center;
@@ -48,4 +45,16 @@
         width: 50px;
         height: 50px;
      }
+}
+
+@media screen and (prefers-color-scheme: dark){
+    .content2_right ul > li > div{
+        background-color: var(--dark-theme-circles-color);
+    }
+}
+
+@media screen and (prefers-color-scheme: light){
+    .content2_right ul > li > div{
+        background-color: var(--light-theme-circles-color);
+    }
 }

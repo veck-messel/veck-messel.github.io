@@ -25,3 +25,15 @@
     transform: scale(1.3);
     transition: .2s;
 }
+
+@media screen and (prefers-color-scheme: dark) {
+    #avsn_light_logo{
+        display: none;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    #avsn_dark_logo{
+        display: none;
+    }
+}

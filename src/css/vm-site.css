@@ -37,25 +37,62 @@ a{
 }
 
 html{
-    /* scroll-behavior: smooth; */
-    background-color: var(--dark-theme-section-background-color)
+    scroll-behavior: smooth;
 }
 
 :root{
-    --dark-theme-header-background-color:  #131b24;
-    --dark-theme-section-background-color: #121920;
-    --dark-theme-after-line-color: white;
-    --dark-theme-principle-form-background-color: linear-gradient(0deg,rgba(39,135,245,.14), rgba(39,135,245,.14)),#121212;
-    --dark-theme-contact-background-color: white;
     --dark-theme-text-color: white;
-    --dark-theme-current-text-color: white;
-    --dark-theme-prev-text-color: #dfedfe;
+
+    --dark-theme-header-background-color:  #131b24;
+    --dark-theme-contact-background-color: white;
+    --dark-theme-contact-background-color-hover: rgba(39, 135, 245, 0.25);
+    --dark-theme-contact-text-color: black;
+    --dark-theme-contact-text-color-hover: white;
+
+    --dark-theme-section-background-color: #121920;
+    --dark-theme-after-line-color: rgb(137, 137, 137);
+
+    --dark-theme-form-color: linear-gradient(0deg,rgba(39,135,245,.14), rgba(39,135,245,.14)),#121212;
+    
+    --dark-theme-circles-color: rgba(39, 135, 245, 0.25);
+    --dark-theme-circles-color-hover: rgba(39, 135, 245, 0.14);
+    --dark-theme-toggle-switch-theme: rgba(39,135,245,.3);
+    --dark-theme-toggle-switch-theme-hover: rgba(39,135,245,.2);
+    
+    /* --dark-theme-tags-color: #202653b8; */
+    --dark-theme-tags-color: rgba(39, 135, 245, 0.15);
+
     --dark-theme-input-border-color: rgba(17, 17, 84, 0.535);
+
+
+
+    --light-theme-text-color: black;
+
+    --light-theme-header-background-color:  rgb(241, 241, 241);
+    --light-theme-contact-background-color: rgb(0, 0, 0);
+    --light-theme-contact-background-color-hover: rgba(138, 173, 213, 0.526);
+    --light-theme-contact-text-color: white;
+    --light-theme-contact-text-color-hover: black;
+    
+    --light-theme-section-background-color: #f5f6f7;
+    --light-theme-after-line-color: white;
+
+    --light-theme-form-color: linear-gradient(0deg,rgba(137, 139, 152, 0.25), rgba(167, 185, 206, 0.25)),#eeeeee;
+    
+    --light-theme-circles-color:rgba(138, 173, 213, 0.526);
+    --light-theme-circles-color-hover: rgba(138, 173, 213, 0.7);
+    --light-theme-toggle-switch-theme: rgba(138, 173, 213, 0.526);
+    --light-theme-toggle-switch-theme-hover: rgba(28, 87, 155, 0.32);
+
+    --light-theme-tags-color: rgba(138, 173, 213, 0.526);
+
+    --light-theme-input-border-color: rgba(173, 173, 180, 0.818);
+
     font-size: 24px;
     line-height: 35px;
-    color: var(--dark-theme-text-color);
     font-family: 'Source Serif 4 Regular';
 }
+
 
 h1, h2, h3, h4, h5, h6{
     font-family: 'Source Serif 4 SemiBold';
@@ -76,17 +113,14 @@ h1{
     position: relative;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
-    background-color: var(--dark-theme-section-background-color);
 }
 
 .section-wrap{
-    /* padding: 40px 10vw 40px 10vw; */
     padding: 40px 160px 40px 170px;
 }
 
 .section-wrap::after{
     content: "";
-    background-color: var(--dark-theme-after-line-color);
     height: 2px;
     width: 100%;
     position: relative;
@@ -161,5 +195,41 @@ h1{
 
     .content{
         padding-bottom: 30px;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    html {
+        background-color: var(--dark-theme-section-background-color);
+    }
+
+    :root{
+        color: var(--dark-theme-text-color);
+    }
+
+    .section{
+        background-color: var(--dark-theme-section-background-color);
+    }
+
+    .section-wrap::after{
+        background-color: var(--dark-theme-after-line-color);
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    html {
+        background-color: var(--light-theme-section-background-color)
+    }
+
+    :root{
+        color: var(--light-theme-text-color);
+    }
+
+    .section{
+        background-color: var(--light-theme-section-background-color);
+    }
+
+    .section-wrap::after{
+        background-color: var(--dark-theme-after-line-color);
     }
 }

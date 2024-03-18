@@ -31,3 +31,15 @@
         padding: 10px 30px;
     }
 }
+
+@media screen and (prefers-color-scheme: dark){
+    .footer{
+        background-color: var(--dark-theme-section-background-color);
+    }
+}
+
+@media screen and (prefers-color-scheme: light){
+    .footer{
+        background-color: var(--light-theme-section-background-color);
+    }
+}
