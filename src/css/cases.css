@@ -80,7 +80,7 @@
     }
 }
 
-@media screen and (prefers-color-scheme: dark) {
+/* @media screen and (prefers-color-scheme: dark) {
     .content7-cases-case{
         background: var(--dark-theme-form-color);
     }
@@ -98,4 +98,4 @@
     .content7-cases-case-tags-tag{
         background-color: var(--light-theme-tags-color);
     }
-}
+} */

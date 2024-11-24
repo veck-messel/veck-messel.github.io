@@ -59,7 +59,6 @@ html{
     --dark-theme-toggle-switch-theme: rgba(39,135,245,.3);
     --dark-theme-toggle-switch-theme-hover: rgba(39,135,245,.2);
     
-    /* --dark-theme-tags-color: #202653b8; */
     --dark-theme-tags-color: rgba(39, 135, 245, 0.15);
 
     --dark-theme-input-border-color: rgba(17, 17, 84, 0.535);
@@ -126,6 +125,7 @@ h1{
     position: relative;
     display: block;
     opacity: .1;
+    background-color: var(--dark-theme-after-line-color);
 
 }
 
@@ -195,41 +195,5 @@ h1{
 
     .content{
         padding-bottom: 30px;
-    }
-}
-
-@media screen and (prefers-color-scheme: dark) {
-    html {
-        background-color: var(--dark-theme-section-background-color);
-    }
-
-    :root{
-        color: var(--dark-theme-text-color);
-    }
-
-    .section{
-        background-color: var(--dark-theme-section-background-color);
-    }
-
-    .section-wrap::after{
-        background-color: var(--dark-theme-after-line-color);
-    }
-}
-
-@media screen and (prefers-color-scheme: light) {
-    html {
-        background-color: var(--light-theme-section-background-color)
-    }
-
-    :root{
-        color: var(--light-theme-text-color);
-    }
-
-    .section{
-        background-color: var(--light-theme-section-background-color);
-    }
-
-    .section-wrap::after{
-        background-color: var(--dark-theme-after-line-color);
     }
 }

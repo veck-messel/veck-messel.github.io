@@ -69,7 +69,7 @@
     }
 }
 
-@media screen and (prefers-color-scheme: dark){
+/* @media screen and (prefers-color-scheme: dark){
     .hidden_menu{
         background-color: var(--dark-theme-principle-form-background-color);
     }
@@ -117,7 +117,7 @@
     #hidden_menu_header_button_light{
         display: block;
     }
-}
+} */
 
 .hidden_menu_header_toggle_switch_color_light{
     background-color: var(--light-theme-toggle-switch-theme);

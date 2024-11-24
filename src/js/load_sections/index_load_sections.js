@@ -11,7 +11,7 @@ const indexSections = new Map([
     ['.footer', 'footer.html'],
 ]);
 
-$(document).ready(() => {
+$(document).on("DOMContentLoaded", () => {
     indexSections.forEach((value, key) => {
         $(key).load('src/html/index_sections/' + value);
     })

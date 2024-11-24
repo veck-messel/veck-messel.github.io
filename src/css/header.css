@@ -7,7 +7,6 @@
 }
 
 .header-wrap{
-    /* padding: 0 160px 0 100px; */
     padding: 0 0px 0 100px;
     height: 100%;
 }
@@ -35,7 +34,6 @@
     justify-content: space-between;
     padding-left: 10px;
     box-sizing: border-box;
-    /* flex: 0 0 calc(100% - 60px); */
     flex: 0 0 calc(100% - 220px);
 }
 
@@ -94,14 +92,6 @@
     vertical-align: middle;
     transition: 0.2s;
     cursor: pointer;
-}
-
-.header_third_link_default_background{
-
-}
-
-.header_third_link_default_text_color{
-
 }
 
 #header_button_light, #header_button_dark{
@@ -168,9 +158,6 @@
         display: none;
     } 
     
-    /* #header_button_light, #header_button_dark{
-        display: block;
-    } */
     .header_hamb_buttons_block{
         display: block;
     }
@@ -203,96 +190,6 @@
         display: inline-block;
     }
 
-}
-
-@media screen and (prefers-color-scheme: dark){
-    .header{
-        background-color: var(--dark-theme-header-background-color);
-    }
-
-    .header_third_link_default_background{
-        background-color: var(--dark-theme-contact-background-color);
-    }
-
-    .header_third_link_dark_background:hover{
-        background-color: var(--dark-theme-contact-background-color-hover);
-    }
-
-    .header_third_link_default_text_color > div > a{
-        color: var(--dark-theme-contact-text-color);
-    }
-
-    .header_third_link_default_text_color:hover > div > a{
-        color: var(--dark-theme-contact-text-color-hover);
-    }
-
-    #header_toggle_light{
-        display: none;
-    }
-
-    .header_mode_toggle_default{
-        background-color: var(--dark-theme-toggle-switch-theme);
-    }
-
-    .header_mode_toggle_default:hover{
-        background-color: var(--dark-theme-toggle-switch-theme-hover);
-    }
-}
-
-@media screen and (prefers-color-scheme: light){
-    .header{
-        background-color: var(--light-theme-header-background-color);
-    }
-
-    .header_third_link_default_background{
-        background-color: var(--light-theme-contact-background-color);
-    }
-
-    .header_third_link_default_background:hover{
-        background-color: var(--light-theme-contact-background-color-hover);
-    }
-
-    .header_third_link_default_text_color > div > a {
-        color: var(--light-theme-contact-text-color);
-    }
-
-    .header_third_link_default_text_color:hover > div > a{
-        color: var(--light-theme-contact-text-color-hover);
-    }
-
-    #header_toggle_dark{
-        display: none;
-    }
-
-    .header_mode_toggle_default{
-        background-color: var(--light-theme-toggle-switch-theme);
-    }
-
-    .header_mode_toggle_default:hover{
-        background-color: var(--light-theme-toggle-switch-theme-hover);
-    }
-}
-
-@media screen and (prefers-color-scheme: light) and (max-width: 800px){
-    
-    #header_button_dark{
-        display: none;
-    }
-
-    #header_button_light{
-        display: block;
-    }
-}
-
-@media screen and (prefers-color-scheme: dark) and (max-width: 800px){
-    
-    #header_button_light{
-        display: none;
-    }
-
-    #header_button_dark{
-        display: block;
-    }
 }
 
 .header_third_link_light_background{
