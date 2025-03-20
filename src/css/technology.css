@@ -54,7 +54,7 @@
     }
 }
 
-@media screen and (prefers-color-scheme: dark){
+/* @media screen and (prefers-color-scheme: dark){
     .content4_bottom_carousel_item{
         background: var(--dark-theme-form-color);
     }
@@ -64,4 +64,4 @@
     .content4_bottom_carousel_item{
         background: var(--light-theme-form-color);
     }
-}
+} */

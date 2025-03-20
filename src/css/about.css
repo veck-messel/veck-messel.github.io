@@ -47,7 +47,7 @@
      }
 }
 
-@media screen and (prefers-color-scheme: dark){
+/* @media screen and (prefers-color-scheme: dark){
     .content2_right ul > li > div{
         background-color: var(--dark-theme-circles-color);
     }
@@ -57,4 +57,4 @@
     .content2_right ul > li > div{
         background-color: var(--light-theme-circles-color);
     }
-}
+} */

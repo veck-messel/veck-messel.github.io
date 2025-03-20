@@ -135,7 +135,7 @@
     }
 }
 
-@media screen and (prefers-color-scheme: dark){
+/* @media screen and (prefers-color-scheme: dark){
     .content3_right_wrap{
         background: var(--dark-theme-form-color);
     }
@@ -145,4 +145,4 @@
     .content3_right_wrap{
         background: var(--light-theme-form-color);
     }
-}
+} */

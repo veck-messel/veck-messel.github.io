@@ -184,7 +184,7 @@ form {
     }
 }
 
-@media screen and (prefers-color-scheme: dark){
+/* @media screen and (prefers-color-scheme: dark){
     .content7-first-block{
         background: var(--dark-theme-form-color);
     }
@@ -222,7 +222,7 @@ form {
         color: var(--light-theme-text-color);
         border-color: var(--light-theme-input-border-color);
     }
-}
+} */
 
 
 .content7-second-block-item-figure-light-color{
