@@ -4,11 +4,13 @@
 }
 
 .content2_left{
-    flex: 0 0 50%
+    flex: 0 0 50%;
+    text-align: center;
 }
 
 .content2_right{
-    flex: 0 0 27%;
+    flex: auto;
+    text-align: center;
 }
 
 .content2_right ul > li{
@@ -29,7 +31,7 @@
 
 @media (max-width: 1440px) {
     .content2_right{
-    flex: 0 0 35%;
+    flex: 0 0 55%;
     }
 }
 
