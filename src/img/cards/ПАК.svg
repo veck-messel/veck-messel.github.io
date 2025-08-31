@@ -1,0 +1,270 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Unified gradient system -->
+    <linearGradient id="centralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6" />
+      <stop offset="100%" style="stop-color:#6d28d9" />
+    </linearGradient>
+    
+    <linearGradient id="nodeGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4" />
+      <stop offset="100%" style="stop-color:#0891b2" />
+    </linearGradient>
+    
+    <linearGradient id="nodeGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981" />
+      <stop offset="100%" style="stop-color:#059669" />
+    </linearGradient>
+    
+    <linearGradient id="nodeGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b" />
+      <stop offset="100%" style="stop-color:#d97706" />
+    </linearGradient>
+    
+    <linearGradient id="nodeGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444" />
+      <stop offset="100%" style="stop-color:#dc2626" />
+    </linearGradient>
+    
+    <linearGradient id="connectionFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Unified filter system -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background system grid -->
+  <g opacity="0.1">
+    <circle cx="200" cy="150" r="80" stroke="#8b5cf6" stroke-width="1" fill="none" stroke-dasharray="2,4">
+      <animate attributeName="stroke-dashoffset" values="0;6" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="150" r="120" stroke="#06b6d4" stroke-width="1" fill="none" stroke-dasharray="3,6">
+      <animate attributeName="stroke-dashoffset" values="0;9" dur="12s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Central Processing Hub -->
+  <g transform="translate(200, 150)" filter="url(#shadow)">
+    <!-- Main processor core -->
+    <circle cx="0" cy="0" r="28" fill="url(#centralGradient)" opacity="0.9" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Processor layers -->
+    <circle cx="0" cy="0" r="20" fill="#1e1b4b" opacity="0.4" />
+    <circle cx="0" cy="0" r="12" fill="url(#centralGradient)" opacity="0.7" />
+    <circle cx="0" cy="0" r="6" fill="#ffffff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Processing indicators -->
+    <g opacity="0.8">
+      <circle cx="0" cy="-15" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="11" cy="-11" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="15" cy="0" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="11" cy="11" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="0" cy="15" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-11" cy="11" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-15" cy="0" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="-11" cy="-11" r="1" fill="#ffffff">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.2s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Peripheral Nodes - unified design -->
+  <!-- Software Interface Node -->
+  <g transform="translate(120, 100)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="18" fill="url(#nodeGradient1)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="12" fill="#1e3a8a" opacity="0.4" />
+    <!-- Interface elements -->
+    <rect x="-8" y="-4" width="16" height="1" fill="#ffffff" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-8" y="-1" width="12" height="1" fill="#ffffff" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.3s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-8" y="2" width="14" height="1" fill="#ffffff" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.3;0.7" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.5" />
+  </g>
+
+  <!-- IoT Sensor Node -->
+  <g transform="translate(280, 100)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="18" fill="url(#nodeGradient3)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="12" fill="#7c2d12" opacity="0.4" />
+    <!-- Sensor core -->
+    <circle cx="0" cy="0" r="4" fill="#ffffff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Signal waves -->
+    <circle cx="0" cy="0" r="8" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.5">
+      <animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.1;0.5" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Hardware Controller Node -->
+  <g transform="translate(120, 200)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="18" fill="url(#nodeGradient2)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="12" fill="#134e4a" opacity="0.4" />
+    <!-- Controller grid -->
+    <g fill="#ffffff" opacity="0.8">
+      <rect x="-6" y="-6" width="2" height="2" />
+      <rect x="-2" y="-6" width="2" height="2" />
+      <rect x="2" y="-6" width="2" height="2" />
+      <rect x="-6" y="-2" width="2" height="2" />
+      <rect x="-2" y="-2" width="2" height="2" />
+      <rect x="2" y="-2" width="2" height="2" />
+      <rect x="-6" y="2" width="2" height="2" />
+      <rect x="-2" y="2" width="2" height="2" />
+      <rect x="2" y="2" width="2" height="2" />
+    </g>
+    <circle cx="0" cy="0" r="2" fill="#10b981" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Embedded System Node -->
+  <g transform="translate(280, 200)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="18" fill="url(#nodeGradient4)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="12" fill="#7f1d1d" opacity="0.4" />
+    <!-- Embedded core -->
+    <rect x="-6" y="-4" width="12" height="8" rx="1" fill="#ffffff" opacity="0.9" />
+    <rect x="-4" y="-2" width="8" height="4" rx="0.5" fill="#ef4444" opacity="0.6" />
+    <!-- Status indicators -->
+    <circle cx="-8" cy="-8" r="1" fill="#10b981" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="8" cy="-8" r="1" fill="#f59e0b" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Unified Connection System -->
+  <g opacity="0.7" filter="url(#glow)">
+    <!-- Central hub to nodes -->
+    <line x1="172" y1="125" x2="138" y2="112" stroke="url(#connectionFlow)" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="228" y1="125" x2="262" y2="112" stroke="url(#connectionFlow)" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="3.2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="172" y1="175" x2="138" y2="188" stroke="url(#connectionFlow)" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="2.8s" repeatCount="indefinite"/>
+    </line>
+    <line x1="228" y1="175" x2="262" y2="188" stroke="url(#connectionFlow)" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="3.5s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- System Status Indicators -->
+  <g opacity="0.6">
+    <circle cx="154" cy="118" r="2" fill="#06b6d4">
+      <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="246" cy="118" r="2" fill="#f59e0b">
+      <animate attributeName="r" values="2;4;2" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="154" cy="182" r="2" fill="#10b981">
+      <animate attributeName="r" values="2;4;2" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="246" cy="182" r="2" fill="#ef4444">
+      <animate attributeName="r" values="2;4;2" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Technology Labels - unified positioning -->
+  <g opacity="0.9">
+    <g>
+      <rect x="78" y="75" width="44" height="12" rx="6" fill="#06b6d4">
+        <animate attributeName="y" values="75;73;75" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="100" y="83" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="83;81;83" dur="3s" repeatCount="indefinite"/>
+        Software
+      </text>
+    </g>
+    
+    <g>
+      <rect x="260" y="75" width="30" height="12" rx="6" fill="#f59e0b">
+        <animate attributeName="y" values="75;73;75" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <text x="275" y="83" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="83;81;83" dur="2.5s" repeatCount="indefinite"/>
+        IoT
+      </text>
+    </g>
+    
+    <g>
+      <rect x="82" y="215" width="48" height="12" rx="6" fill="#10b981">
+        <animate attributeName="y" values="215;213;215" dur="3.2s" repeatCount="indefinite"/>
+      </rect>
+      <text x="106" y="223" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="223;221;223" dur="3.2s" repeatCount="indefinite"/>
+        Hardware
+      </text>
+    </g>
+    
+    <g>
+      <rect x="248" y="215" width="54" height="12" rx="6" fill="#ef4444">
+        <animate attributeName="y" values="215;213;215" dur="2.8s" repeatCount="indefinite"/>
+      </rect>
+      <text x="275" y="223" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="223;221;223" dur="2.8s" repeatCount="indefinite"/>
+        Embedded
+      </text>
+    </g>
+    
+    <!-- Central system label -->
+    <g>
+      <rect x="175" y="125" width="50" height="12" rx="6" fill="#8b5cf6">
+        <animate attributeName="y" values="125;123;125" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="200" y="133" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="133;131;133" dur="3s" repeatCount="indefinite"/>
+        Integration
+      </text>
+    </g>
+  </g>
+</svg>

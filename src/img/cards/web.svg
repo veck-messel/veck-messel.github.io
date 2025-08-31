@@ -1,0 +1,160 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient definitions -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <linearGradient id="laptopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8f4fd" />
+      <stop offset="100%" style="stop-color:#c8e6f5" />
+    </linearGradient>
+    
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2332" />
+      <stop offset="100%" style="stop-color:#2d3748" />
+    </linearGradient>
+    
+    <linearGradient id="codeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ade80" />
+      <stop offset="50%" style="stop-color:#22d3ee" />
+      <stop offset="100%" style="stop-color:#a78bfa" />
+    </linearGradient>
+    
+    <!-- Filter for glow effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Drop shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+
+  
+  <!-- Floating particles -->
+  <circle cx="50" cy="50" r="2" fill="#667eea" opacity="0.3">
+    <animate attributeName="cy" values="50;40;50" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="350" cy="80" r="1.5" fill="#764ba2" opacity="0.4">
+    <animate attributeName="cy" values="80;70;80" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="80" cy="250" r="1" fill="#4ade80" opacity="0.5">
+    <animate attributeName="cy" values="250;240;250" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Laptop base -->
+  <ellipse cx="200" cy="260" rx="120" ry="8" fill="#000" opacity="0.1" />
+  
+  <!-- Laptop keyboard part -->
+  <path d="M 80 240 L 320 240 L 310 260 L 90 260 Z" fill="url(#laptopGradient)" filter="url(#shadow)" />
+  
+  <!-- Laptop screen -->
+  <rect x="110" y="120" width="180" height="120" rx="8" fill="#f7fafc" filter="url(#shadow)" />
+  <rect x="118" y="128" width="164" height="104" rx="4" fill="url(#screenGradient)" />
+  
+  <!-- Code editor window -->
+  <rect x="125" y="140" width="150" height="80" rx="4" fill="#1a202c" />
+  
+  <!-- Window controls -->
+  <circle cx="135" cy="150" r="3" fill="#ef4444" />
+  <circle cx="145" cy="150" r="3" fill="#f59e0b" />
+  <circle cx="155" cy="150" r="3" fill="#10b981" />
+  
+  <!-- Code lines with animation -->
+  <g filter="url(#glow)">
+    <rect x="130" y="165" width="60" height="2" rx="1" fill="url(#codeGradient)" opacity="0.8">
+      <animate attributeName="width" values="60;80;60" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="130" y="172" width="45" height="2" rx="1" fill="#22d3ee" opacity="0.7">
+      <animate attributeName="width" values="45;65;45" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="130" y="179" width="70" height="2" rx="1" fill="#a78bfa" opacity="0.8">
+      <animate attributeName="width" values="70;90;70" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="130" y="186" width="35" height="2" rx="1" fill="#4ade80" opacity="0.6">
+      <animate attributeName="width" values="35;55;35" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="130" y="193" width="55" height="2" rx="1" fill="#22d3ee" opacity="0.7">
+      <animate attributeName="width" values="55;75;55" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="130" y="200" width="40" height="2" rx="1" fill="url(#codeGradient)" opacity="0.8">
+      <animate attributeName="width" values="40;60;40" dur="2.3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- Technology tags floating around -->
+  <g opacity="0.9">
+    <!-- JS|TS tag - левый верх -->
+    <g>
+      <rect x="70" y="80" width="50" height="18" rx="9" fill="#f7df1e">
+        <animate attributeName="y" values="80;75;80" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="95" y="92" text-anchor="middle" fill="#000" font-family="Arial, sans-serif" font-size="9" font-weight="bold">
+        <animate attributeName="y" values="92;87;92" dur="3s" repeatCount="indefinite"/>
+        JS|TS
+      </text>
+    </g>
+    
+    <!-- Next.js tag - правый верх -->
+    <g>
+      <rect x="280" y="80" width="50" height="18" rx="9" fill="#000000">
+        <animate attributeName="y" values="80;75;80" dur="3.2s" repeatCount="indefinite"/>
+      </rect>
+      <text x="305" y="92" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="92;87;92" dur="3.2s" repeatCount="indefinite"/>
+        Next.js
+      </text>
+    </g>
+    
+    <!-- React tag - центр верх -->
+    <g>
+      <rect x="177.5" y="60" width="45" height="18" rx="9" fill="#61dafb">
+        <animate attributeName="y" values="60;55;60" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <text x="200" y="72" text-anchor="middle" fill="#000" font-family="Arial, sans-serif" font-size="9" font-weight="bold">
+        <animate attributeName="y" values="72;67;72" dur="2.5s" repeatCount="indefinite"/>
+        React
+      </text>
+    </g>
+    
+    <!-- Vue tag - левый низ -->
+    <g>
+      <rect x="70" y="270" width="40" height="18" rx="9" fill="#4fc08d">
+        <animate attributeName="y" values="270;265;270" dur="2.8s" repeatCount="indefinite"/>
+      </rect>
+      <text x="90" y="282" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9" font-weight="bold">
+        <animate attributeName="y" values="282;277;282" dur="2.8s" repeatCount="indefinite"/>
+        Vue
+      </text>
+    </g>
+    
+    <!-- Angular tag - правый низ -->
+    <g>
+      <rect x="290" y="270" width="55" height="18" rx="9" fill="#dd0031">
+        <animate attributeName="y" values="270;265;270" dur="2.2s" repeatCount="indefinite"/>
+      </rect>
+      <text x="317.5" y="282" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="282;277;282" dur="2.2s" repeatCount="indefinite"/>
+        Angular
+      </text>
+    </g>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.3">
+    <path d="M 20 120 Q 40 100 60 120 T 100 120" stroke="url(#codeGradient)" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,200;100,100;0,200" dur="4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 300 180 Q 320 160 340 180 T 380 180" stroke="url(#codeGradient)" stroke-width="2" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,200;100,100;0,200" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

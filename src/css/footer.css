@@ -1,35 +1,31 @@
-.footer{
-    background-color: #121920; 
-    position: relative; 
-    padding: 40px 160px 40px 170px;
+.footer {
+  background-color: #121920;
+  position: relative;
+  padding: 40px 160px 40px 170px;
 }
 
-
-@media (max-width: 1200px){
-    .footer{
-        padding: 20px 160px 20px 170px;
-    }
+@media (max-width: 1200px) {
+  .footer {
+    padding: 20px 160px 20px 170px;
+  }
 }
 
-
-@media (max-width: 1000px){
-    .footer{
-        padding: 20px 110px 20px 120px;
-    }
-}
- 
-@media (max-width: 800px){
-    .footer{
-        padding: 20px 60px 20px 70px;
-    }
+@media (max-width: 1000px) {
+  .footer {
+    padding: 20px 110px 20px 120px;
+  }
 }
 
+@media (max-width: 800px) {
+  .footer {
+    padding: 20px 60px 20px 70px;
+  }
+}
 
-
-@media (max-width: 500px){
-    .footer{
-        padding: 10px 30px;
-    }
+@media (max-width: 500px) {
+  .footer {
+    padding: 10px 30px;
+  }
 }
 
 /* @media screen and (prefers-color-scheme: dark){

@@ -1,0 +1,279 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Unified gradient system -->
+    <linearGradient id="centralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6" />
+      <stop offset="100%" style="stop-color:#6d28d9" />
+    </linearGradient>
+    
+    <linearGradient id="processGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4" />
+      <stop offset="100%" style="stop-color:#0891b2" />
+    </linearGradient>
+    
+    <linearGradient id="processGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981" />
+      <stop offset="100%" style="stop-color:#059669" />
+    </linearGradient>
+    
+    <linearGradient id="processGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b" />
+      <stop offset="100%" style="stop-color:#d97706" />
+    </linearGradient>
+    
+    <linearGradient id="processGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444" />
+      <stop offset="100%" style="stop-color:#dc2626" />
+    </linearGradient>
+    
+    <linearGradient id="workflowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Unified filter system -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Workflow orbit system -->
+  <g opacity="0.1">
+    <circle cx="200" cy="150" r="70" stroke="#8b5cf6" stroke-width="1" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="150" r="100" stroke="#06b6d4" stroke-width="1" fill="none" stroke-dasharray="3,7">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="12s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Central Integration Hub -->
+  <g transform="translate(200, 150)" filter="url(#shadow)">
+    <!-- Main coordination core -->
+    <circle cx="0" cy="0" r="32" fill="url(#centralGradient)" opacity="0.9" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Process integration layers -->
+    <circle cx="0" cy="0" r="24" fill="#1e1b4b" opacity="0.4" />
+    <circle cx="0" cy="0" r="16" fill="url(#centralGradient)" opacity="0.6" />
+    <circle cx="0" cy="0" r="8" fill="#ffffff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Coordination spokes -->
+    <g stroke="#ffffff" stroke-width="2" opacity="0.6">
+      <line x1="0" y1="-20" x2="0" y2="-12" />
+      <line x1="14" y1="-14" x2="8" y2="-8" />
+      <line x1="20" y1="0" x2="12" y2="0" />
+      <line x1="14" y1="14" x2="8" y2="8" />
+      <line x1="0" y1="20" x2="0" y2="12" />
+      <line x1="-14" y1="14" x2="-8" y2="8" />
+      <line x1="-20" y1="0" x2="-12" y2="0" />
+      <line x1="-14" y1="-14" x2="-8" y2="-8" />
+    </g>
+    
+    <!-- Process sync indicators -->
+    <g opacity="0.8">
+      <circle cx="0" cy="-18" r="1" fill="#06b6d4">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="13" cy="-13" r="1" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="18" cy="0" r="1" fill="#f59e0b">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="13" cy="13" r="1" fill="#ef4444">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+  </g>
+
+  <!-- Process Nodes - unified design -->
+  <!-- Planning Process -->
+  <g transform="translate(130, 100)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="url(#processGradient1)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="#1e3a8a" opacity="0.4" />
+    <!-- Planning elements -->
+    <rect x="-8" y="-6" width="16" height="1" fill="#ffffff" opacity="0.8" />
+    <rect x="-6" y="-3" width="12" height="1" fill="#ffffff" opacity="0.6" />
+    <rect x="-8" y="0" width="16" height="1" fill="#ffffff" opacity="0.7" />
+    <rect x="-4" y="3" width="8" height="1" fill="#ffffff" opacity="0.5" />
+    <rect x="-6" y="6" width="12" height="1" fill="#ffffff" opacity="0.9" />
+    <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.5" />
+  </g>
+
+  <!-- Development Process -->
+  <g transform="translate(270, 100)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="url(#processGradient2)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="#134e4a" opacity="0.4" />
+    <!-- Code development -->
+    <rect x="-8" y="-4" width="6" height="1" fill="#ffffff" opacity="0.9" />
+    <rect x="-1" y="-4" width="9" height="1" fill="#ffffff" opacity="0.7" />
+    <rect x="-8" y="-1" width="4" height="1" fill="#ffffff" opacity="0.8" />
+    <rect x="-3" y="-1" width="7" height="1" fill="#ffffff" opacity="0.6" />
+    <rect x="5" y="-1" width="4" height="1" fill="#ffffff" opacity="0.5" />
+    <rect x="-8" y="2" width="8" height="1" fill="#ffffff" opacity="0.9" />
+    <rect x="1" y="2" width="5" height="1" fill="#ffffff" opacity="0.4" />
+    <circle cx="0" cy="0" r="2" fill="#10b981" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Testing Process -->
+  <g transform="translate(130, 200)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="url(#processGradient3)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="#7c2d12" opacity="0.4" />
+    <!-- Testing matrix -->
+    <g fill="#ffffff" opacity="0.8">
+      <circle cx="-6" cy="-6" r="1" />
+      <circle cx="0" cy="-6" r="1" />
+      <circle cx="6" cy="-6" r="1" />
+      <circle cx="-6" cy="0" r="1" />
+      <circle cx="0" cy="0" r="1" />
+      <circle cx="6" cy="0" r="1" />
+      <circle cx="-6" cy="6" r="1" />
+      <circle cx="0" cy="6" r="1" />
+      <circle cx="6" cy="6" r="1" />
+    </g>
+    <!-- Test status -->
+    <rect x="-8" y="8" width="3" height="2" fill="#10b981" opacity="0.9" />
+    <rect x="-4" y="8" width="3" height="2" fill="#f59e0b" opacity="0.6" />
+    <rect x="0" y="8" width="3" height="2" fill="#10b981" opacity="0.8" />
+    <rect x="4" y="8" width="3" height="2" fill="#10b981" opacity="0.7" />
+  </g>
+
+  <!-- Deployment Process -->
+  <g transform="translate(270, 200)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="url(#processGradient4)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="#7f1d1d" opacity="0.4" />
+    <!-- Deployment pipeline -->
+    <rect x="-8" y="-6" width="16" height="3" rx="1" fill="#ffffff" opacity="0.9" />
+    <rect x="-8" y="-1" width="16" height="3" rx="1" fill="#ffffff" opacity="0.7" />
+    <rect x="-8" y="4" width="16" height="3" rx="1" fill="#ffffff" opacity="0.8" />
+    <!-- Deploy status -->
+    <circle cx="-8" cy="-8" r="1" fill="#10b981" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="8" cy="-8" r="1" fill="#f59e0b" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="2" fill="#ffffff" opacity="0.6" />
+  </g>
+
+  <!-- Unified Workflow Connections -->
+  <g opacity="0.7" filter="url(#glow)">
+    <!-- Process flow connections -->
+    <path d="M 152 110 Q 180 130 178 140" stroke="url(#workflowGradient)" stroke-width="3" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 222 140 Q 250 130 248 110" stroke="url(#workflowGradient)" stroke-width="3" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="3.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 178 160 Q 180 170 152 190" stroke="url(#workflowGradient)" stroke-width="3" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 248 190 Q 250 170 222 160" stroke="url(#workflowGradient)" stroke-width="3" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Process Status Indicators -->
+  <g opacity="0.6">
+    <circle cx="165" cy="125" r="2" fill="#06b6d4">
+      <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="235" cy="125" r="2" fill="#10b981">
+      <animate attributeName="r" values="2;4;2" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="165" cy="175" r="2" fill="#f59e0b">
+      <animate attributeName="r" values="2;4;2" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="235" cy="175" r="2" fill="#ef4444">
+      <animate attributeName="r" values="2;4;2" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Process Labels - unified positioning -->
+  <g opacity="0.9">
+    <g>
+      <rect x="90" y="75" width="50" height="12" rx="6" fill="#06b6d4">
+        <animate attributeName="y" values="75;73;75" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="115" y="83" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="83;81;83" dur="3s" repeatCount="indefinite"/>
+        Planning
+      </text>
+    </g>
+    
+    <g>
+      <rect x="230" y="75" width="60" height="12" rx="6" fill="#10b981">
+        <animate attributeName="y" values="75;73;75" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <text x="260" y="83" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="83;81;83" dur="2.5s" repeatCount="indefinite"/>
+        Development
+      </text>
+    </g>
+    
+    <g>
+      <rect x="100" y="215" width="40" height="12" rx="6" fill="#f59e0b">
+        <animate attributeName="y" values="215;213;215" dur="3.2s" repeatCount="indefinite"/>
+      </rect>
+      <text x="120" y="223" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="223;221;223" dur="3.2s" repeatCount="indefinite"/>
+        Testing
+      </text>
+    </g>
+    
+    <g>
+      <rect x="235" y="215" width="50" height="12" rx="6" fill="#ef4444">
+        <animate attributeName="y" values="215;213;215" dur="2.8s" repeatCount="indefinite"/>
+      </rect>
+      <text x="260" y="223" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="223;221;223" dur="2.8s" repeatCount="indefinite"/>
+        Deployment
+      </text>
+    </g>
+    
+    <!-- Central coordination label -->
+    <g>
+      <rect x="165" y="135" width="70" height="12" rx="6" fill="#8b5cf6">
+        <animate attributeName="y" values="135;133;135" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="200" y="143" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="143;141;143" dur="3s" repeatCount="indefinite"/>
+        Coordination
+      </text>
+    </g>
+  </g>
+
+  <!-- Agile iteration indicator -->
+  <g opacity="0.3">
+    <circle cx="200" cy="150" r="60" stroke="url(#workflowGradient)" stroke-width="2" fill="none" stroke-dasharray="10,5">
+      <animate attributeName="stroke-dashoffset" values="0;15" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

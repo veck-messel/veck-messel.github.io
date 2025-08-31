@@ -1,57 +1,147 @@
-.content4{
+.content4 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.content4_bottom_carousel {
+  display: flex;
+  overflow: scroll;
+  scrollbar-width: none;
+  gap: 30px;
+}
+
+.content4_bottom_carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.content4_bottom_carousel_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 620px;
+  text-align: center;
+  flex: 0 0 auto;
+  border-radius: 30px;
+  align-content: space-around;
+  padding: 20px 14px;
+}
+
+@media (max-width: 1000px) {
+  .content4_bottom_carousel {
+    scroll-snap-type: x mandatory;
+    align-items: stretch; /* Растягиваем карточки по высоте */
+    gap: 25px; /* Увеличиваем расстояние между карточками */
+    padding: 0 15px; /* Добавляем отступы по бокам карусели */
+  }
+
+  .content4_bottom_carousel_item {
+    width: 320px; /* Увеличили с 250px до 320px */
+    min-height: 580px; /* Минимальная высота */
+    height: auto; /* Автоматическая высота */
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    justify-content: flex-start;
+    padding: 30px 20px; /* Увеличили отступы */
+  }
+
+  /* Увеличиваем изображения для широких карточек */
+  .content4_bottom_carousel_item img {
+    width: 190px !important; /* Увеличили размер */
+    height: 170px !important;
+    object-fit: cover;
+    margin: 0 auto 25px auto;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 12px; /* Опционально */
+  }
+
+  /* Текстовый контейнер */
+  .content4_bottom_carousel_item .text-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  /* Увеличиваем размер текста */
+  .content4_bottom_carousel_item h3 {
+    font-size: 20px !important; /* Увеличили */
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+  }
+
+  .content4_bottom_carousel_item p {
+    font-size: 16px !important; /* Увеличили */
+    line-height: 1.5;
+    margin: 8px 0;
+    width: 100%;
+  }
 }
 
-.content4_bottom_carousel{
-    display: flex; 
-    overflow: scroll; 
-    scrollbar-width: none; 
+@media (max-width: 600px) {
+  .content4 {
     gap: 30px;
-}
+  }
 
-.content4_bottom_carousel::-webkit-scrollbar{
-    display: none;
-}
+  .content4_bottom_carousel {
+    align-items: stretch; /* Растягиваем карточки по высоте */
+  }
 
-.content4_bottom_carousel_item{
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    width: 300px; 
-    height: 620px;
-    text-align: center; 
-    flex: 0 0 auto;
-    border-radius: 30px;
-    align-content: space-around;
-    padding: 20px 14px;
-}
+  .content4_bottom_carousel_item {
+    width: 260px;
+    min-height: 320px; /* Минимальная высота */
+    height: auto; /* Автоматическая высота */
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
 
-@media (max-width: 1000px){
-    .content4_bottom_carousel{
-        scroll-snap-type: x mandatory;
-    }
-    .content4_bottom_carousel_item{
-        width: 250px;
-        height: 550px;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
-    }
-    
-}
+  /* Квадратные изображения 160x160px */
+  .content4_bottom_carousel_item img {
+    width: 160px;
+    height: 140px;
+    object-fit: cover;
+    margin: 0 auto 15px auto;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 10px; /* опционально */
+  }
 
-@media (max-width: 600px){
-    .content4{
-        gap: 30px;
-    }
-}
+  /* Текстовый контейнер занимает все доступное пространство */
+  .content4_bottom_carousel_item .text-content {
+    flex: 1; /* Занимает оставшееся пространство */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+  }
 
-@media (max-width: 600px){
-    .content4_bottom_carousel_item{
-        width: 200px;
-        height: 320px;
-    }
+  /* Стили для текста */
+  .content4_bottom_carousel_item h3,
+  .content4_bottom_carousel_item p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 5px 0;
+    width: 100%;
+  }
+
+  .content4_bottom_carousel_item h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  /* Убеждаемся, что текст не выходит за границы */
+  .content4_bottom_carousel_item p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Ограничиваем количество строк */
+    -webkit-box-orient: vertical;
+  }
 }
 
 /* @media screen and (prefers-color-scheme: dark){
