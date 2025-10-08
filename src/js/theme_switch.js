@@ -157,6 +157,8 @@ const updateLogoAndImgStyles = (previousTheme, newTheme) => {
   $(`#avsn_${newTheme}_logo`).css("display", "block");
   $(`#komatsu_${previousTheme}_logo`).css("display", "none");
   $(`#komatsu_${newTheme}_logo`).css("display", "block");
+  $(`#ha_${previousTheme}_logo`).css("display", "none");
+  $(`#ha_${newTheme}_logo`).css("display", "block");
   $(`#header_button_${previousTheme}`).css("display", "none");
   $(`#header_button_${newTheme}`).css("display", "block");
   $(`#hidden_menu_header_button_${newTheme}`).css("display", "block");

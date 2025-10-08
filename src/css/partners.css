@@ -31,14 +31,18 @@
   transition: 0.2s;
 }
 
+/* Скрываем светлые логотипы по умолчанию */
 #avsn_light_logo,
-#komatsu_light_logo {
-  display: none;
+#komatsu_light_logo,
+#ha_light_logo {
+    display: none;
 }
 
+/* Показываем темные логотипы по умолчанию */
 #avsn_dark_logo,
-#komatsu_dark_logo {
-  display: block;
+#komatsu_dark_logo,
+#ha_dark_logo {
+    display: block;
 }
 
 .content6-partner-block img:hover {
