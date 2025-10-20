@@ -51,42 +51,33 @@ $(document).ready(function () {
   // block_name - имя flex-контейнера
   function move(e, block_name) {
     // Ширина невидимого блока
-    // let carousel_block_width = $(carousel_block_name).width();
     let carousel_block_width = $(block_name).prop("scrollWidth");
     // Ширина видимой прокручиваемой части
     let visible_piece_width = $(block_name).width();
     // Максимальный сдвиг
     let max_shift = carousel_block_width - visible_piece_width;
 
-    // Текущая и предыдущая координата курсора
-    let current_coordX_px = e.clientX - $(block_name).position().left;
+    let block_offset = $(block_name).offset();
+    let current_coordX_px = e.clientX - block_offset.left;
     let prev_coordX_px = prev_coordsX_px.get(block_name);
-    // При первом нажатии карусель сразу не сдвинется, а сдвинется только после смещения курсора
+
     if (prev_coordX_px == 0) {
       prev_coordX_px = current_coordX_px;
     }
 
-    // Для высчитывания сдвига в пикселях мы используем сдвиг в процентах от ширины блока умноженного на ширину блока в пикселях
-    let carousel_shift_px =
-      carousel_shifts_percent.get(block_name) * carousel_block_width;
-    // Записываем начальный сдвиг
+    let carousel_shift_px = carousel_shifts_percent.get(block_name) * carousel_block_width;
     let prev_carousel_shift_px = carousel_shift_px;
-    // Считаем новый
-    carousel_shift_px =
-      carousel_shift_px + (current_coordX_px - prev_coordX_px);
-    // Если сдвиг больше максимального, то мы его не увеличиваем, а отсавляем начальным
+    carousel_shift_px = carousel_shift_px + (current_coordX_px - prev_coordX_px);
+    
     if (carousel_shift_px <= -max_shift - 50 || carousel_shift_px > 50) {
       carousel_shift_px = prev_carousel_shift_px;
     }
 
     $(block_name).scrollLeft(-carousel_shift_px);
 
-    carousel_shifts_percent.set(
-      block_name,
-      carousel_shift_px / carousel_block_width,
-    );
+    carousel_shifts_percent.set(block_name, carousel_shift_px / carousel_block_width);
     prev_coordsX_px.set(block_name, current_coordX_px);
-  }
+}
 
   // ids = new Array()
 

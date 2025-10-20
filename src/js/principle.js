@@ -118,7 +118,7 @@ $(document).ready(() => {
     try {
       delete_canv(prev_id);
       document.getElementById(block_name.get(prev_id)).style.opacity = ".4";
-    } catch (err) {}
+    } catch (err) { }
     document.getElementById(block_name.get(current_id)).style.opacity = ".9";
     create_canv(current_id);
   }
