@@ -1,0 +1,340 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Unified gradient system -->
+    <linearGradient id="centralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6" />
+      <stop offset="100%" style="stop-color:#6d28d9" />
+    </linearGradient>
+    
+    <linearGradient id="stageGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4" />
+      <stop offset="100%" style="stop-color:#0891b2" />
+    </linearGradient>
+    
+    <linearGradient id="stageGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981" />
+      <stop offset="100%" style="stop-color:#059669" />
+    </linearGradient>
+    
+    <linearGradient id="stageGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b" />
+      <stop offset="100%" style="stop-color:#d97706" />
+    </linearGradient>
+    
+    <linearGradient id="stageGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ef4444" />
+      <stop offset="100%" style="stop-color:#dc2626" />
+    </linearGradient>
+    
+    <linearGradient id="dataFlowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.3" />
+      <stop offset="50%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:0.3" />
+    </linearGradient>
+    
+    <!-- Unified filter system -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Data pipeline orbit system -->
+  <g opacity="0.1">
+    <ellipse cx="200" cy="150" rx="140" ry="60" stroke="#8b5cf6" stroke-width="1" fill="none" stroke-dasharray="5,5">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="200" cy="150" rx="100" ry="40" stroke="#06b6d4" stroke-width="1" fill="none" stroke-dasharray="3,7">
+      <animate attributeName="stroke-dashoffset" values="0;10" dur="12s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Central Processing Engine -->
+  <g transform="translate(200, 150)" filter="url(#shadow)">
+    <!-- Main data processing core -->
+    <circle cx="0" cy="0" r="28" fill="url(#centralGradient)" opacity="0.9" filter="url(#glow)">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Processing layers -->
+    <circle cx="0" cy="0" r="20" fill="#1e1b4b" opacity="0.4" />
+    <circle cx="0" cy="0" r="12" fill="url(#centralGradient)" opacity="0.6" />
+    <circle cx="0" cy="0" r="6" fill="#ffffff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Data flow indicators -->
+    <g stroke="#ffffff" stroke-width="1" opacity="0.6">
+      <path d="M -15 0 L 15 0" marker-end="url(#arrowhead)">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 0 -15 L 0 15" marker-end="url(#arrowhead)">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.3s" repeatCount="indefinite"/>
+      </path>
+      <path d="M -11 -11 L 11 11" marker-end="url(#arrowhead)">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="1.8s" repeatCount="indefinite"/>
+      </path>
+      <path d="M 11 -11 L -11 11" marker-end="url(#arrowhead)">
+        <animate attributeName="opacity" values="0.6;1;0.6" dur="2.2s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    
+    <!-- Processing activity indicators -->
+    <g opacity="0.8">
+      <circle cx="0" cy="-16" r="1" fill="#06b6d4">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="11" cy="-11" r="1" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.7s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="16" cy="0" r="1" fill="#f59e0b">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="11" cy="11" r="1" fill="#ef4444">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <!-- Define arrowhead marker -->
+    <defs>
+      <marker id="arrowhead" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
+        <polygon points="0 0, 6 2, 0 4" fill="#ffffff" />
+      </marker>
+    </defs>
+  </g>
+
+  <!-- Data Pipeline Stages - unified design -->
+  <!-- Data Sources Stage -->
+  <g transform="translate(80, 150)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="url(#stageGradient1)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="#1e3a8a" opacity="0.4" />
+    <!-- Data sources visualization -->
+    <rect x="-8" y="-8" width="6" height="6" rx="1" fill="#ffffff" opacity="0.8" />
+    <rect x="0" y="-8" width="6" height="6" rx="1" fill="#ffffff" opacity="0.6" />
+    <rect x="-8" y="0" width="6" height="6" rx="1" fill="#ffffff" opacity="0.7" />
+    <rect x="0" y="0" width="6" height="6" rx="1" fill="#ffffff" opacity="0.9" />
+    <!-- Activity indicators -->
+    <circle cx="-5" cy="-5" r="1" fill="#06b6d4" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="3" cy="3" r="1" fill="#10b981" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Data Warehouse Stage -->
+  <g transform="translate(320, 150)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="url(#stageGradient2)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="#134e4a" opacity="0.4" />
+    <!-- Warehouse structure -->
+    <rect x="-8" y="-8" width="16" height="3" rx="1" fill="#ffffff" opacity="0.8" />
+    <rect x="-8" y="-4" width="16" height="3" rx="1" fill="#ffffff" opacity="0.6" />
+    <rect x="-8" y="0" width="16" height="3" rx="1" fill="#ffffff" opacity="0.7" />
+    <rect x="-8" y="4" width="16" height="3" rx="1" fill="#ffffff" opacity="0.9" />
+    <!-- Storage indicators -->
+    <rect x="-6" y="-7" width="2" height="2" fill="#10b981" opacity="0.8" />
+    <rect x="-2" y="-7" width="2" height="2" fill="#f59e0b" opacity="0.6" />
+    <rect x="2" y="-7" width="2" height="2" fill="#10b981" opacity="0.9" />
+    <rect x="6" y="-7" width="2" height="2" fill="#06b6d4" opacity="0.7" />
+  </g>
+
+  <!-- Analytics Stage -->
+  <g transform="translate(280, 220)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="url(#stageGradient3)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="#7c2d12" opacity="0.4" />
+    <!-- Analytics visualization -->
+    <rect x="-8" y="2" width="2" height="6" fill="#ffffff" opacity="0.9">
+      <animate attributeName="height" values="6;10;6" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="2;-2;2" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-4" y="4" width="2" height="4" fill="#ffffff" opacity="0.7">
+      <animate attributeName="height" values="4;8;4" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="4;0;4" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="0" width="2" height="8" fill="#ffffff" opacity="0.8">
+      <animate attributeName="height" values="8;12;8" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="0;-4;0" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="4" y="6" width="2" height="2" fill="#ffffff" opacity="0.6">
+      <animate attributeName="height" values="2;6;2" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="y" values="6;2;6" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Analysis indicator -->
+    <circle cx="0" cy="-12" r="1" fill="#f59e0b" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Visualization Stage -->
+  <g transform="translate(120, 220)" filter="url(#shadow)">
+    <circle cx="0" cy="0" r="22" fill="url(#stageGradient4)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="0" r="16" fill="#7f1d1d" opacity="0.4" />
+    <!-- Dashboard visualization -->
+    <rect x="-8" y="-8" width="16" height="12" rx="2" fill="#ffffff" opacity="0.3" />
+    <!-- Chart widgets -->
+    <circle cx="-4" cy="-3" r="3" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.7" stroke-dasharray="4,2">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M 1 2 L 3 -1 L 5 1 L 7 -2" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <!-- Status indicators -->
+    <rect x="-6" y="4" width="3" height="2" fill="#ffffff" opacity="0.6" />
+    <rect x="-1" y="4" width="3" height="2" fill="#ffffff" opacity="0.8" />
+    <rect x="4" y="4" width="3" height="2" fill="#ffffff" opacity="0.7" />
+  </g>
+
+  <!-- Unified Data Flow System -->
+  <g opacity="0.7" filter="url(#glow)">
+    <!-- Sources to Processing -->
+    <path d="M 102 150 Q 140 150 172 150" stroke="url(#dataFlowGradient)" stroke-width="4" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;0,100" dur="3s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Processing to Warehouse -->
+    <path d="M 228 150 Q 260 150 298 150" stroke="url(#dataFlowGradient)" stroke-width="4" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;0,100" dur="3.2s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Warehouse to Analytics -->
+    <path d="M 308 172 Q 295 195 290 198" stroke="url(#dataFlowGradient)" stroke-width="3" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,50;25,25;0,50" dur="2.8s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Analytics to Visualization -->
+    <path d="M 258 220 Q 200 225 142 220" stroke="url(#dataFlowGradient)" stroke-width="3" fill="none">
+      <animate attributeName="stroke-dasharray" values="0,150;75,75;0,150" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Feedback loop -->
+    <path d="M 120 198 Q 160 180 200 175" stroke="url(#dataFlowGradient)" stroke-width="2" fill="none" opacity="0.5">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;0,100" dur="4s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Pipeline Status Indicators -->
+  <g opacity="0.6">
+    <circle cx="137" cy="150" r="2" fill="#06b6d4">
+      <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="263" cy="150" r="2" fill="#10b981">
+      <animate attributeName="r" values="2;4;2" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="299" cy="185" r="2" fill="#f59e0b">
+      <animate attributeName="r" values="2;4;2" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="205" r="2" fill="#ef4444">
+      <animate attributeName="r" values="2;4;2" dur="2.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Stage Labels - unified positioning -->
+  <g opacity="0.9">
+    <g>
+      <rect x="45" y="125" width="50" height="12" rx="6" fill="#06b6d4">
+        <animate attributeName="y" values="125;123;125" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="70" y="133" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="133;131;133" dur="3s" repeatCount="indefinite"/>
+        Sources
+      </text>
+    </g>
+    
+    <g>
+      <rect x="285" y="125" width="60" height="12" rx="6" fill="#10b981">
+        <animate attributeName="y" values="125;123;125" dur="2.5s" repeatCount="indefinite"/>
+      </rect>
+      <text x="315" y="133" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="133;131;133" dur="2.5s" repeatCount="indefinite"/>
+        Warehouse
+      </text>
+    </g>
+    
+    <g>
+      <rect x="245" y="240" width="50" height="12" rx="6" fill="#f59e0b">
+        <animate attributeName="y" values="240;238;240" dur="3.2s" repeatCount="indefinite"/>
+      </rect>
+      <text x="270" y="248" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="248;246;248" dur="3.2s" repeatCount="indefinite"/>
+        Analytics
+      </text>
+    </g>
+    
+    <g>
+      <rect x="80" y="240" width="60" height="12" rx="6" fill="#ef4444">
+        <animate attributeName="y" values="240;238;240" dur="2.8s" repeatCount="indefinite"/>
+      </rect>
+      <text x="110" y="248" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="248;246;248" dur="2.8s" repeatCount="indefinite"/>
+        Visualization
+      </text>
+    </g>
+    
+    <!-- Central processing label -->
+    <g>
+      <rect x="165" y="135" width="70" height="12" rx="6" fill="#8b5cf6">
+        <animate attributeName="y" values="135;133;135" dur="3s" repeatCount="indefinite"/>
+      </rect>
+      <text x="200" y="143" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">
+        <animate attributeName="y" values="143;141;143" dur="3s" repeatCount="indefinite"/>
+        Processing
+      </text>
+    </g>
+  </g>
+
+  <!-- Data particles in motion -->
+  <g opacity="0.6">
+    <!-- Data packet 1 -->
+    <circle cx="80" cy="150" r="1.5" fill="#06b6d4">
+      <animate attributeName="r" values="1.5;3;1.5" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+      <animateMotion dur="8s" repeatCount="indefinite">
+        <path d="M 0 0 Q 60 0 102 0 Q 140 0 172 0 Q 200 0 228 0 Q 260 0 298 0 Q 308 22 290 48 Q 258 70 200 75 Q 142 70 120 48"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Data packet 2 -->
+    <circle cx="80" cy="150" r="1.5" fill="#10b981">
+      <animate attributeName="r" values="1.5;3;1.5" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite"/>
+      <animateMotion dur="10s" repeatCount="indefinite" begin="2s">
+        <path d="M 0 0 Q 60 0 102 0 Q 140 0 172 0 Q 200 0 228 0 Q 260 0 298 0 Q 308 22 290 48 Q 258 70 200 75 Q 142 70 120 48"/>
+      </animateMotion>
+    </circle>
+    
+    <!-- Data packet 3 -->
+    <circle cx="80" cy="150" r="1.5" fill="#f59e0b">
+      <animate attributeName="r" values="1.5;3;1.5" dur="2.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.2s" repeatCount="indefinite"/>
+      <animateMotion dur="9s" repeatCount="indefinite" begin="4s">
+        <path d="M 0 0 Q 60 0 102 0 Q 140 0 172 0 Q 200 0 228 0 Q 260 0 298 0 Q 308 22 290 48 Q 258 70 200 75 Q 142 70 120 48"/>
+      </animateMotion>
+    </circle>
+  </g>
+
+  <!-- Data architecture flow -->
+  <g opacity="0.3">
+    <ellipse cx="200" cy="185" rx="80" ry="25" stroke="url(#dataFlowGradient)" stroke-width="1" fill="none" stroke-dasharray="3,3">
+      <animate attributeName="stroke-dashoffset" values="0;6" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+</svg>

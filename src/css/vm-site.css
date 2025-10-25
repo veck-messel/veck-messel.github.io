@@ -9,191 +9,207 @@
 @import url("conversation_form.css");
 @import url("footer.css");
 
-@font-face{
-    font-family: 'Source Serif 4 Regular';
-    src: url(/src/css/fonts/Source_Serif4/static/SourceSerif4_18pt-Regular.ttf);
+@font-face {
+  font-family: "Source Serif 4 Regular";
+  src: url(/src/css/fonts/Source_Serif4/static/SourceSerif4_18pt-Regular.ttf);
 }
 
-@font-face{
-    font-family: 'Source Serif 4 SemiBold';
-    src: url(/src/css/fonts/Source_Serif4/static/SourceSerif4-SemiBold.ttf);
+@font-face {
+  font-family: "Source Serif 4 SemiBold";
+  src: url(/src/css/fonts/Source_Serif4/static/SourceSerif4-SemiBold.ttf);
 }
 
 * {
-    -webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Eurostile";
 }
 
-h1, h2, h3, h4, h5, h6, span, p, a, label, input, textarea, button{
-    opacity: .9;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+a,
+label,
+input,
+textarea,
+button {
+  opacity: 0.9;
 }
 
-a{
-    color: unset;
-    text-decoration: unset;
+a {
+  color: unset;
+  text-decoration: unset;
 }
 
-html{
-    scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-:root{
-    --dark-theme-text-color: white;
+:root {
+  --dark-theme-text-color: white;
 
-    --dark-theme-header-background-color:  #131b24;
-    --dark-theme-contact-background-color: white;
-    --dark-theme-contact-background-color-hover: rgba(39, 135, 245, 0.25);
-    --dark-theme-contact-text-color: black;
-    --dark-theme-contact-text-color-hover: white;
+  --dark-theme-header-background-color: #131b24;
+  --dark-theme-contact-background-color: white;
+  --dark-theme-contact-background-color-hover: rgba(39, 135, 245, 0.25);
+  --dark-theme-contact-text-color: black;
+  --dark-theme-contact-text-color-hover: white;
 
-    --dark-theme-section-background-color: #121920;
-    --dark-theme-after-line-color: rgb(137, 137, 137);
+  --dark-theme-section-background-color: #121920;
+  --dark-theme-after-line-color: rgb(137, 137, 137);
 
-    --dark-theme-form-color: linear-gradient(0deg,rgba(39,135,245,.14), rgba(39,135,245,.14)),#121212;
-    
-    --dark-theme-circles-color: rgba(39, 135, 245, 0.25);
-    --dark-theme-circles-color-hover: rgba(39, 135, 245, 0.14);
-    --dark-theme-toggle-switch-theme: rgba(39,135,245,.3);
-    --dark-theme-toggle-switch-theme-hover: rgba(39,135,245,.2);
-    
-    --dark-theme-tags-color: rgba(39, 135, 245, 0.15);
+  --dark-theme-form-color:
+    linear-gradient(0deg, rgba(39, 135, 245, 0.14), rgba(39, 135, 245, 0.14)),
+    #121212;
 
-    --dark-theme-input-border-color: rgba(17, 17, 84, 0.535);
+  --dark-theme-circles-color: rgba(39, 135, 245, 0.25);
+  --dark-theme-circles-color-hover: rgba(39, 135, 245, 0.14);
+  --dark-theme-toggle-switch-theme: rgba(39, 135, 245, 0.3);
+  --dark-theme-toggle-switch-theme-hover: rgba(39, 135, 245, 0.2);
 
+  --dark-theme-tags-color: rgba(39, 135, 245, 0.15);
 
+  --dark-theme-input-border-color: rgba(17, 17, 84, 0.535);
 
-    --light-theme-text-color: black;
+  --light-theme-text-color: black;
 
-    --light-theme-header-background-color:  rgb(241, 241, 241);
-    --light-theme-contact-background-color: rgb(0, 0, 0);
-    --light-theme-contact-background-color-hover: rgba(138, 173, 213, 0.526);
-    --light-theme-contact-text-color: white;
-    --light-theme-contact-text-color-hover: black;
-    
-    --light-theme-section-background-color: #f5f6f7;
-    --light-theme-after-line-color: white;
+  --light-theme-header-background-color: rgb(241, 241, 241);
+  --light-theme-contact-background-color: rgb(0, 0, 0);
+  --light-theme-contact-background-color-hover: rgba(138, 173, 213, 0.526);
+  --light-theme-contact-text-color: white;
+  --light-theme-contact-text-color-hover: black;
 
-    --light-theme-form-color: linear-gradient(0deg,rgba(137, 139, 152, 0.25), rgba(167, 185, 206, 0.25)),#eeeeee;
-    
-    --light-theme-circles-color:rgba(138, 173, 213, 0.526);
-    --light-theme-circles-color-hover: rgba(138, 173, 213, 0.7);
-    --light-theme-toggle-switch-theme: rgba(138, 173, 213, 0.526);
-    --light-theme-toggle-switch-theme-hover: rgba(28, 87, 155, 0.32);
+  --light-theme-section-background-color: #f5f6f7;
+  --light-theme-after-line-color: white;
 
-    --light-theme-tags-color: rgba(138, 173, 213, 0.526);
+  --light-theme-form-color:
+    linear-gradient(0deg, rgba(137, 139, 152, 0.25), rgba(167, 185, 206, 0.25)),
+    #eeeeee;
 
-    --light-theme-input-border-color: rgba(173, 173, 180, 0.818);
+  --light-theme-circles-color: rgba(138, 173, 213, 0.526);
+  --light-theme-circles-color-hover: rgba(138, 173, 213, 0.7);
+  --light-theme-toggle-switch-theme: rgba(138, 173, 213, 0.526);
+  --light-theme-toggle-switch-theme-hover: rgba(28, 87, 155, 0.32);
 
+  --light-theme-tags-color: rgba(138, 173, 213, 0.526);
+
+  --light-theme-input-border-color: rgba(173, 173, 180, 0.818);
+
+  font-size: 24px;
+  line-height: 35px;
+  font-family: "Source Serif 4 Regular";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Serif 4 SemiBold";
+}
+
+#root {
+  max-width: 1920px;
+  width: 100%;
+  margin: auto;
+}
+
+h1 {
+  margin-top: 0;
+  line-height: 40px;
+}
+
+.section {
+  position: relative;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+.section-wrap {
+  padding: 40px 160px 40px 170px;
+}
+
+.section-wrap::after {
+  content: "";
+  height: 2px;
+  width: 100%;
+  position: relative;
+  display: block;
+  opacity: 0.1;
+  background-color: var(--dark-theme-after-line-color);
+}
+
+.content {
+  padding-bottom: 70px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  :root {
     font-size: 24px;
-    line-height: 35px;
-    font-family: 'Source Serif 4 Regular';
+  }
+
+  .section-wrap {
+    padding: 20px 160px 20px 170px;
+  }
+
+  .content {
+    padding-bottom: 50px;
+  }
 }
 
+@media (max-width: 1000px) {
+  :root {
+    font-size: 19px;
+    line-height: 30px;
+  }
 
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Source Serif 4 SemiBold';
+  .section-wrap {
+    padding: 20px 110px 20px 120px;
+  }
 }
 
-#root{
-    max-width: 1920px;
-    width: 100%;
-    margin: auto;
+@media (max-width: 800px) {
+  :root {
+    font-size: 20px;
+  }
+
+  .section-wrap {
+    padding: 20px 60px 20px 70px;
+  }
 }
 
-h1{
-    margin-top: 0;
-    line-height: 40px;
+@media (max-width: 600px) {
+  :root {
+    font-size: 15px;
+    line-height: 20px;
+  }
 }
 
-.section{
-    position: relative;
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-}
+@media (max-width: 500px) {
+  :root {
+    font-size: 15px;
+    line-height: 20px;
+  }
 
-.section-wrap{
-    padding: 40px 160px 40px 170px;
-}
+  .section-wrap {
+    padding: 10px 30px;
+  }
 
-.section-wrap::after{
-    content: "";
-    height: 2px;
-    width: 100%;
-    position: relative;
-    display: block;
-    opacity: .1;
-    background-color: var(--dark-theme-after-line-color);
+  .left_header_content {
+    display: none;
+  }
 
-}
-
-.content{
-    padding-bottom: 70px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-@media (max-width: 1200px){
-    :root{
-        font-size: 24px;
-    }
-
-    .section-wrap{
-        padding: 20px 160px 20px 170px;
-    }
-
-    .content{
-        padding-bottom: 50px;
-    }
-}
-
-
-@media (max-width: 1000px){
-    :root{
-        font-size: 19px;
-        line-height: 30px;
-    }
-
-    .section-wrap{
-        padding: 20px 110px 20px 120px;
-    }
-}
- 
-@media (max-width: 800px){
-    :root{
-        font-size: 20px;
-    }
-
-    .section-wrap{
-        padding: 20px 60px 20px 70px;
-    }
-}
-
-@media (max-width: 600px){
-    :root{
-        font-size: 15px;
-        line-height: 20px;
-    }
-}
-
-
-@media (max-width: 500px){
-    :root{
-        font-size: 15px;
-        line-height: 20px;
-    }
-
-    .section-wrap{
-        padding: 10px 30px;
-    }
-
-    .left_header_content{
-        display: none;
-    }
-
-    .content{
-        padding-bottom: 30px;
-    }
+  .content {
+    padding-bottom: 30px;
+  }
 }

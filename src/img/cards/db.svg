@@ -1,0 +1,205 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definitions -->
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="dbGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="serverGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b91c1c;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="dataFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0" />
+      <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0" />
+    </linearGradient>
+    
+    <!-- Filters -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="2" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <!-- Убираем фон для прозрачности -->
+  
+  <!-- Background data particles -->
+  <g opacity="0.2">
+    <circle cx="50" cy="50" r="3" fill="#2563eb" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.1;0.6" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="50;40;50" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="350" cy="70" r="2" fill="#dc2626" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.2;0.7" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="70;60;70" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="80" cy="250" r="2.5" fill="#7c3aed" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="250;240;250" dur="4.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="320" cy="240" r="2" fill="#2563eb" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="240;230;240" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Central Database Stack -->
+  <g transform="translate(200, 200)" filter="url(#shadow)">
+    <!-- Database cylinder - правильный стиль -->
+    
+    <!-- Bottom disk (back) -->
+    <ellipse cx="0" cy="25" rx="35" ry="8" fill="#1e40af" opacity="0.8"/>
+    
+    <!-- Cylinder body -->
+    <rect x="-35" y="-25" width="70" height="50" fill="url(#dbGradient)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.7;0.9" dur="4s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Separating lines between layers -->
+    <ellipse cx="0" cy="8" rx="35" ry="8" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="0" cy="-8" rx="35" ry="8" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.4;0.7" dur="2.5s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- Top disk (front) -->
+    <ellipse cx="0" cy="-25" rx="35" ry="8" fill="url(#dbGradient)" filter="url(#glow)">
+      <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  
+  <!-- Left Server -->
+  <g transform="translate(80, 150)" filter="url(#shadow)">
+    <rect x="-25" y="-35" width="50" height="70" rx="8" fill="url(#serverGradient)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.7;0.9" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Server indicators -->
+    <rect x="-18" y="-25" width="36" height="4" rx="2" fill="#ffffff" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-18" y="-17" width="36" height="4" rx="2" fill="#ffffff" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-18" y="-9" width="36" height="4" rx="2" fill="#ffffff" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.4;0.7" dur="1.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-18" y="-1" width="36" height="4" rx="2" fill="#ffffff" opacity="0.5">
+      <animate attributeName="opacity" values="0.5;0.9;0.5" dur="2.2s" repeatCount="indefinite"/>
+    </rect>
+    
+    <!-- Server ports -->
+    <circle cx="-15" cy="15" r="3" fill="#ffffff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.5;0.9" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="15" r="3" fill="#ffffff" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="15" cy="15" r="3" fill="#ffffff" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Right Cloud Storage -->
+  <g transform="translate(320, 150)" filter="url(#shadow)">
+    <!-- Cloud shape - увеличенная -->
+    <path d="M -40 0 Q -45 -20 -25 -30 Q -12 -45 8 -38 Q 20 -45 40 -30 Q 45 -20 40 0 Q 25 20 0 8 Q -20 20 -40 0 Z" 
+          fill="url(#cloudGradient)" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.7;0.9" dur="3.5s" repeatCount="indefinite"/>
+    </path>
+    
+    <!-- Cloud data indicators -->
+    <circle cx="-15" cy="-20" r="3" fill="#ffffff" opacity="0.8">
+      <animate attributeName="opacity" values="0.8;0.4;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="-25" r="2.5" fill="#ffffff" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="15" cy="-15" r="3.5" fill="#ffffff" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.5;0.9" dur="1.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-8" cy="-8" r="2" fill="#ffffff" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="8" cy="-5" r="2.2" fill="#ffffff" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Data flow connections -->
+  <g opacity="0.8">
+    <!-- Database to Server -->
+    <line x1="170" y1="175" x2="100" y2="150" stroke="url(#dataFlow)" stroke-width="4">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;0,100" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Database to Cloud -->
+    <line x1="230" y1="175" x2="295" y2="150" stroke="url(#dataFlow)" stroke-width="4">
+      <animate attributeName="stroke-dasharray" values="0,100;50,50;0,100" dur="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;1;0.8" dur="2.2s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- Server to Cloud sync -->
+    <line x1="105" y1="140" x2="290" y2="140" stroke="#64748b" stroke-width="2" opacity="0.3" stroke-dasharray="8,8">
+      <animate attributeName="stroke-dashoffset" values="0;16" dur="3s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Storage types labels -->
+  <g opacity="0.9">
+    <rect x="45" y="200" width="70" height="18" rx="9" fill="#dc2626">
+      <animate attributeName="y" values="200;195;200" dur="3s" repeatCount="indefinite"/>
+    </rect>
+    <text x="80" y="212" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+      <animate attributeName="y" values="212;207;212" dur="3s" repeatCount="indefinite"/>
+      SERVER
+    </text>
+    
+    <rect x="165" y="245" width="70" height="18" rx="9" fill="#2563eb">
+      <animate attributeName="y" values="245;240;245" dur="3.2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="200" y="257" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+      <animate attributeName="y" values="257;252;257" dur="3.2s" repeatCount="indefinite"/>
+      DATABASE
+    </text>
+    
+    <rect x="285" y="185" width="70" height="18" rx="9" fill="#7c3aed">
+      <animate attributeName="y" values="185;180;185" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+    <text x="320" y="197" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">
+      <animate attributeName="y" values="197;192;197" dur="2.8s" repeatCount="indefinite"/>
+      CLOUD
+    </text>
+  </g>
+  
+  <!-- Data sync indicators -->
+  <g opacity="0.6">
+    <circle cx="140" cy="170" r="1.5" fill="#2563eb">
+      <animate attributeName="r" values="1.5;4;1.5" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="170" r="1.5" fill="#dc2626">
+      <animate attributeName="r" values="1.5;4;1.5" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
