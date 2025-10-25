@@ -33,6 +33,10 @@
 
 // В словари необходимо добавлять пары вида [ClassSelector видимого блока, 0]
 $(document).ready(function () {
+  $("img").attr("draggable", false).on("dragstart", (e) => {
+    e.preventDefault();
+  });
+
   let prev_coordsX_px = new Map();
   let carousel_shifts_percent = new Map();
   let initial_carousel_shifts_percent = new Map();
@@ -127,13 +131,28 @@ $(document).ready(function () {
     auto_scroll_enable = false,
   ) {
     create_initial_data(block_name);
+    let isDragging = false;
     let carousel_block_width = $(block_name).prop("scrollWidth");
     let carousel_shift_percent = carousel_shifts_percent.get(block_name);
     let carousel_shift_px = carousel_shift_percent * carousel_block_width;
     $(block_name).scrollLeft(-carousel_shift_px);
     load_func();
 
+    $(block_name).on("scroll", () => {
+      let updated_block_width = $(block_name).prop("scrollWidth");
+      if (!updated_block_width) {
+        return;
+      }
+      let current_shift_px = -$(block_name).scrollLeft();
+      let current_shift_percent = current_shift_px / updated_block_width;
+      carousel_shifts_percent.set(block_name, current_shift_percent);
+      if (!isDragging) {
+        initial_carousel_shifts_percent.set(block_name, current_shift_percent);
+      }
+    });
+
     $(block_name).on("mousedown", function () {
+      isDragging = true;
       $(block_name).on("mousemove", (e) => {
         e.preventDefault();
         auto_scroll_enables.set(block_name, false);
@@ -154,6 +173,7 @@ $(document).ready(function () {
         $(document).off("mousedown");
         $(document).off("mousemove");
         $(block_name).off("mousemove");
+        isDragging = false;
 
         prev_coordsX_px.set(block_name, 0);
         if (
